@@ -3,7 +3,8 @@ import { createStitches, globalCss } from '@stitches/react';
 export const { styled } = createStitches({
   theme: {
     colors: {
-      primary: '#081A2A',
+      bg: '#081A2A',
+      primary: '#05AAF3',
       secondary: '#FFFFFF',
       placeholder: '#838C94',
     },
@@ -30,7 +31,7 @@ globalCss({
   },
 
   body: {
-    backgroundColor: '$primary',
+    backgroundColor: '$bg',
     color: '$secondary',
   },
 
