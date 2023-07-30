@@ -1,3 +1,4 @@
+import Button from './components/Button';
 import { Header } from './components/Header';
 import { About } from './style/About';
 import { Container } from './style/Container';
@@ -38,12 +39,14 @@ function App() {
             </div>
 
             <div className="home__made-by flex">
-              <img
-                src="./home-img.png"
-                alt="Minha Imagem"
-                className="home__profile"
-                draggable="false"
-              />
+              <figure>
+                <img
+                  src="./home-img.png"
+                  alt="Minha Imagem"
+                  className="home__profile"
+                  draggable="false"
+                />
+              </figure>
               <h4 className="home__made-by-title">
                 Feito por
                 <span className="highlight"> Vitor Santos</span>
@@ -68,35 +71,41 @@ function App() {
           </svg>
 
           <div className="home__btns-social">
-            <a href="/curriculo.pdf" target="_blank">
-              <button className="btn cv flex">
-                <BiSolidUserBadge size={35} />
-              </button>
-            </a>
+            <Button
+              inner={<BiSolidUserBadge size={35} />}
+              link="/curriculo.pdf"
+              className="cv"
+              location="home"
+              blank
+            />
 
-            <a
-              href="https://www.linkedin.com/in/vitor-hp-santos/"
-              target="_blank"
-            >
-              <button className="btn lkd flex">
-                <BiLogoLinkedinSquare size={35} />
-              </button>
-            </a>
+            <Button
+              inner={<BiLogoLinkedinSquare size={35} />}
+              link="https://www.linkedin.com/in/vitor-hp-santos/"
+              className="lkd"
+              location="home"
+              blank
+            />
 
-            <a href="https://github.com/vitorsantos920" target="_blank">
-              <button className="btn gh flex">
-                <BiLogoGithub size={35} />
-              </button>
-            </a>
+            <Button
+              inner={<BiLogoGithub size={35} />}
+              link="https://github.com/vitorsantos920"
+              className="gh"
+              location="home"
+              blank
+            />
           </div>
         </Home>
 
         <About className="about flex">
-          <img
-            src="/about-img.png"
-            className="about__img"
-            alt="Imagem de Vitor Santos"
-          />
+          <figure>
+            <img
+              src="/about-img.png"
+              className="about__img"
+              alt="Imagem de Vitor Santos"
+            />
+          </figure>
+
           <div className="about__content">
             <h2 className="about__title">Sobre mim</h2>
             <q cite="personal" className="about__phrase">
@@ -116,9 +125,7 @@ function App() {
               vida das pessoas, de forma a auxiliá-las a evoluir.{' '}
             </p>
 
-            <a href="#">
-              <button>Entre em Contato</button>
-            </a>
+            <Button inner="Entre em contato" link="#" location="about" />
           </div>
         </About>
       </main>

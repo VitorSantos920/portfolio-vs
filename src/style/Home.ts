@@ -1,9 +1,7 @@
 import { keyframes } from '@stitches/react';
 import { styled } from '../../stitches.config';
 
-const draw = keyframes({
-  to: { strokeDashoffset: 0 },
-});
+const draw = keyframes({ to: { strokeDashoffset: 0 } });
 
 export const Home = styled('section', {
   alignItems: 'center',
@@ -16,8 +14,6 @@ export const Home = styled('section', {
   '.home__content': {
     width: 552,
 
-    '.home__title span': { color: '$primary' },
-
     '.home__container-title': {
       marginBottom: '1.25rem !important',
       position: 'relative',
@@ -25,6 +21,10 @@ export const Home = styled('section', {
       '.home__title': {
         fontSize: '3.5rem',
         fontWeight: '$extraBold',
+
+        span: {
+          color: '$primary',
+        },
       },
 
       '#circle': {
@@ -68,69 +68,5 @@ export const Home = styled('section', {
 
     strokeDasharray: 520,
     strokeDashoffset: 520,
-  },
-
-  '.btn': {
-    alignItems: 'center',
-    boxSizing: 'border-box',
-    background: '$bg',
-    backgroundClip: 'padding-box',
-    border: 'solid 0px transparent',
-    borderRadius: '1rem',
-    color: '#fff',
-    cursor: 'pointer',
-    fontWeight: '$bold',
-    height: 55,
-    justifyContent: 'center',
-    margin: '3.75rem 0',
-    padding: '0',
-    position: 'relative',
-    transition: '1s',
-    width: '12.5rem',
-
-    '&::before': {
-      background: 'linear-gradient(to bottom, $primary, $secondary)',
-      borderRadius: 'inherit',
-      bottom: '0',
-      content: '',
-      left: '0',
-      margin: '-3px',
-      position: 'absolute',
-      right: '0',
-      top: '0',
-      zIndex: -1,
-    },
-
-    svg: {
-      fill: '#fff',
-      transition: '1s',
-    },
-
-    '&::after': {
-      color: '#fff',
-      fontSize: '1.25rem',
-      left: '40%',
-      opacity: 0,
-      position: 'absolute',
-      top: '50%',
-      transform: 'translateY(-50%)',
-      transition: 'all 0.3s ease-in-out',
-    },
-
-    '&.cv::after': { content: 'Currículo' },
-
-    '&.lkd::after': { content: 'LinkedIn' },
-
-    '&.gh::after': { content: 'GitHub' },
-
-    '&:hover': {
-      '&::after': {
-        color: '#fff',
-        opacity: 1,
-        transition: '1s 0.7s ease-in-out',
-      },
-
-      svg: { transform: 'translateX(-50px) rotateY(180deg)' },
-    },
   },
 });
