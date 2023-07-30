@@ -1,4 +1,5 @@
 import { Header } from './components/Header';
+import { About } from './style/About';
 import { Container } from './style/Container';
 import { Home } from './style/Home';
 import {
@@ -89,6 +90,37 @@ function App() {
             </a>
           </div>
         </Home>
+
+        <About className="about flex">
+          <img
+            src="/about-img.png"
+            className="about__img"
+            alt="Imagem de Vitor Santos"
+          />
+          <div className="about__content">
+            <h2 className="about__title">Sobre mim</h2>
+            <q cite="personal" className="about__phrase">
+              Gosto de refletir o amor que sinto pela Tecnologia nas Interfaces
+              e Linhas de Código que desenvolvo.
+            </q>
+            <p className="about__description">
+              Me chamo Vitor Hugo Pires dos Santos e sou um Desenvolvedor
+              Front-End em busca de um Estágio como primeira experiência no
+              mercado de trabalho, para me profissionalizar e, consequentemente,
+              aprender sempre mais colocando em prática meus conhecimentos. Com
+              19 anos, sou Técnico em Informática desde 2021, pela Escola
+              Salesiana São José, e estou no 4° semestre no Curso Superior de
+              Tecnologia (CST) em Análise e Desenvolvimento de Sistemas (ADS) na
+              Faculdade de Tecnologia (FATEC) de Campinas. Por meio da
+              Tecnologia, desejo desenvolver aplicações que farão a diferença na
+              vida das pessoas, de forma a auxiliá-las a evoluir.{' '}
+            </p>
+
+            <a href="#">
+              <button>Entre em Contato</button>
+            </a>
+          </div>
+        </About>
       </main>
     </Container>
   );
