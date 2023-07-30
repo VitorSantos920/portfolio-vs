@@ -14,6 +14,7 @@ export const HeaderContainer = styled('header', {
   top: 50,
   transform: 'translateX(-50%)',
   width: '80%',
+  zIndex: 2,
 
   svg: {
     cursor: 'pointer',
@@ -31,6 +32,7 @@ export const HeaderContainer = styled('header', {
     borderRadius: '3rem 0 3rem 3rem',
     boxShadow: '2px 0 36px 0 #000000',
     opacity: 0,
+    visibility: 'hidden',
     padding: '1.5rem 3rem',
     position: 'absolute',
     right: 0,
@@ -38,7 +40,6 @@ export const HeaderContainer = styled('header', {
     transformOrigin: 'top',
     transition: '.7s ease-out',
     top: 60,
-    zIndex: 2,
 
     '.header__menu-items': {
       alignItems: 'flex-end',
@@ -48,6 +49,7 @@ export const HeaderContainer = styled('header', {
   },
 
   '.header__nav.open': {
+    visibility: 'visible',
     opacity: 1,
     right: 30,
     top: 74,
