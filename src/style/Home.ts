@@ -8,7 +8,7 @@ export const Home = styled('section', {
   gap: 10,
   justifyContent: 'space-around',
   width: '100%',
-  margin: '175px auto',
+  margin: '$betweenSection 0',
   fontFamily: '$title',
 
   '.home__content': {
