@@ -27,16 +27,16 @@ function App() {
               </h1>
               <svg
                 id="circle"
-                width="200"
-                height="60"
-                viewBox="0 0 217 104"
+                width="240"
+                height="160"
+                viewBox="-40 -30 257 105"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   d="M111.366 100C111.366 100 12.1666 98.2888 4.69997 61.393C-3.47013 21.0331 61.5757 4.26721 111.366 4.00426C156.882 3.76427 214.898 13.5913 212.952 50.9587C210.951 89.3653 101.207 86.4354 101.207 86.4354"
                   stroke="white"
-                  stroke-width="10"
+                  stroke-width="7"
                   stroke-linecap="round"
                 />
               </svg>

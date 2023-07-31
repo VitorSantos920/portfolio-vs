@@ -25,10 +25,10 @@ export const Home = styled('section', {
 
       '#circle': {
         position: 'absolute',
-        bottom: 0,
+        bottom: -25,
 
         path: {
-          animation: `${draw} 4s 2.5s ease forwards`,
+          animation: `${draw} 4s ease forwards`,
 
           strokeDasharray: 503,
           strokeDashoffset: 503,
