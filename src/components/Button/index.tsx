@@ -7,7 +7,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   link: string;
   location: 'home' | 'about' | 'projects';
 }
-export default function Button({
+export function Button({
   inner,
   blank = false,
   link,
