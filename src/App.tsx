@@ -19,8 +19,11 @@ function App() {
           <div className="home__content">
             <div className="home__container-title">
               <h1 className="home__title">
-                <span className="highlight">Um Desenvolvedor Front-End</span>{' '}
-                que trabalha com <span className="highlight">Detalhes</span>.
+                <span className="text-highlight">
+                  Um Desenvolvedor Front-End
+                </span>{' '}
+                que trabalha com{' '}
+                <span className="text-highlight">Detalhes</span>.
               </h1>
               <svg
                 id="circle"
@@ -50,7 +53,7 @@ function App() {
               </figure>
               <h4 className="home__made-by-title">
                 Feito por
-                <span className="highlight"> Vitor Santos</span>
+                <span className="text-highlight"> Vitor Santos</span>
               </h4>
             </div>
           </div>
@@ -109,21 +112,28 @@ function App() {
 
           <div className="about__content">
             <Subtitle className="about__title">Sobre mim</Subtitle>
+
             <q cite="personal" className="about__phrase">
               Gosto de refletir o amor que sinto pela Tecnologia nas Interfaces
               e Linhas de Código que desenvolvo.
             </q>
+
             <p className="about__description">
               Me chamo Vitor Hugo Pires dos Santos e sou um Desenvolvedor
               Front-End em busca de um Estágio como primeira experiência no
               mercado de trabalho, para me profissionalizar e, consequentemente,
               aprender sempre mais colocando em prática meus conhecimentos. Com
-              19 anos, sou Técnico em Informática desde 2021, pela Escola
-              Salesiana São José, e estou no 4° semestre no Curso Superior de
-              Tecnologia (CST) em Análise e Desenvolvimento de Sistemas (ADS) na
-              Faculdade de Tecnologia (FATEC) de Campinas. Por meio da
-              Tecnologia, desejo desenvolver aplicações que farão a diferença na
-              vida das pessoas, de forma a auxiliá-las a evoluir.{' '}
+              19 anos, sou{' '}
+              <span className="text-highlight">Técnico em Informática</span>{' '}
+              desde 2021, pela Escola Salesiana São José, e estou no 4° semestre
+              no Curso Superior de Tecnologia (CST) em{' '}
+              <span className="text-highlight">
+                Análise e Desenvolvimento de Sistemas (ADS)
+              </span>{' '}
+              na Faculdade de Tecnologia (FATEC) de Campinas. Por meio da
+              Tecnologia, desejo desenvolver aplicações que{' '}
+              <span className="text-highlight">farão a diferença</span> na vida
+              das pessoas, de forma a auxiliá-las a evoluir.
             </p>
 
             <Button inner="Entre em contato" link="#" location="about" />

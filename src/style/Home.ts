@@ -21,10 +21,6 @@ export const Home = styled('section', {
       '.home__title': {
         fontSize: '3.5rem',
         fontWeight: '$extraBold',
-
-        span: {
-          color: '$primary',
-        },
       },
 
       '#circle': {
@@ -55,11 +51,7 @@ export const Home = styled('section', {
         position: 'relative',
       },
 
-      '.home__made-by-title': {
-        fontSize: '1rem',
-
-        span: { color: '$primary' },
-      },
+      '.home__made-by-title': { fontSize: '1rem' },
     },
   },
 

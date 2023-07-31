@@ -43,4 +43,6 @@ globalCss({
   },
 
   '.flex': { display: 'flex' },
+
+  '.text-highlight': { color: '$primary' },
 })();
