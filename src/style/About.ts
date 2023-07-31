@@ -14,5 +14,34 @@ const brightness = keyframes({
 });
 
 export const About = styled('section', {
-  img: { animation: `${brightness} 4s alternate infinite ease-in` },
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: '1rem',
+
+  figure: {
+    flexGrow: 1,
+
+    img: {
+      animation: `${brightness} 4s alternate infinite ease-in`,
+      width: '85%',
+    },
+  },
+
+  '.about__phrase': {
+    display: 'block',
+    fontFamily: '$text',
+    fontStyle: 'italic',
+    margin: '1rem 0 2rem',
+    fontSize: '1.25rem',
+  },
+
+  '.about__content': { width: '50%' },
+
+  '.about__description': {
+    fontFamily: '$text',
+    textAlign: 'justify',
+    fontWeight: '$medium',
+    lineHeight: '170%',
+    fontSize: '1.1rem',
+  },
 });
