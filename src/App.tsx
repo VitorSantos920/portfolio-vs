@@ -13,6 +13,7 @@ import { HiOutlineBadgeCheck } from 'react-icons/hi';
 
 import { Subtitle } from './style/Subtitle';
 import { Principles } from './style/Principles';
+import { Phrase } from './style/Phrase';
 
 function App() {
   return (
@@ -117,10 +118,10 @@ function App() {
           <div className="about__content">
             <Subtitle className="about__title">Sobre mim</Subtitle>
 
-            <q cite="personal" className="about__phrase">
+            <Phrase cite="personal" className="about__phrase">
               Gosto de refletir o amor que sinto pela Tecnologia nas Interfaces
               e Linhas de Código que desenvolvo.
-            </q>
+            </Phrase>
 
             <p className="about__description">
               Me chamo Vitor Hugo Pires dos Santos e sou um Desenvolvedor
@@ -150,10 +151,10 @@ function App() {
               Meus princípios no desenvolvimento
             </Subtitle>
 
-            <q cite="personal" className="principles__phrase">
+            <Phrase cite="personal" className="principles__phrase">
               É fazer com Capricho, Carinho e Dedicação. Ter Amor e Felicidade
               com o que faz.
-            </q>
+            </Phrase>
 
             <figure>
               <img src="/principles-img.png" alt="Imagem de Vitor Santos" />
