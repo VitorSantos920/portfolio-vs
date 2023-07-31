@@ -8,6 +8,7 @@ import {
   BiLogoLinkedinSquare,
   BiSolidUserBadge,
 } from 'react-icons/bi';
+import { Subtitle } from './style/Subtitle';
 
 function App() {
   return (
@@ -107,7 +108,7 @@ function App() {
           </figure>
 
           <div className="about__content">
-            <h2 className="about__title">Sobre mim</h2>
+            <Subtitle className="about__title">Sobre mim</Subtitle>
             <q cite="personal" className="about__phrase">
               Gosto de refletir o amor que sinto pela Tecnologia nas Interfaces
               e Linhas de Código que desenvolvo.
