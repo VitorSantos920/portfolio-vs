@@ -63,10 +63,14 @@ export const Home = styled('section', {
     },
   },
 
-  '#line path': {
-    animation: `${draw} 4s ease forwards`,
+  '#line': {
+    height: 440,
 
-    strokeDasharray: 520,
-    strokeDashoffset: 520,
+    path: {
+      animation: `${draw} 4s ease forwards`,
+
+      strokeDasharray: 520,
+      strokeDashoffset: 520,
+    },
   },
 });
