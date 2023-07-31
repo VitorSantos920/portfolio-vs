@@ -1,14 +1,18 @@
-import Button from './components/Button';
-import { Header } from './components/Header';
 import { About } from './style/About';
+import { Button } from './components/Button';
 import { Container } from './style/Container';
+import { Header } from './components/Header';
 import { Home } from './style/Home';
+
 import {
   BiLogoGithub,
   BiLogoLinkedinSquare,
   BiSolidUserBadge,
 } from 'react-icons/bi';
+import { HiOutlineBadgeCheck } from 'react-icons/hi';
+
 import { Subtitle } from './style/Subtitle';
+import { Principles } from './style/Principles';
 
 function App() {
   return (
@@ -139,6 +143,80 @@ function App() {
             <Button inner="Entre em contato" link="#" location="about" />
           </div>
         </About>
+
+        <Principles className="principles flex">
+          <div className="principles__col-1">
+            <Subtitle className="principles__title">
+              Meus princípios no desenvolvimento
+            </Subtitle>
+
+            <q cite="personal" className="principles__phrase">
+              É fazer com Capricho, Carinho e Dedicação. Ter Amor e Felicidade
+              com o que faz.
+            </q>
+
+            <figure>
+              <img src="/principles-img.png" alt="Imagem de Vitor Santos" />
+            </figure>
+          </div>
+
+          <div className="principles__col-2">
+            <article className="principles__principle">
+              <div className="principles__principle-title-container flex">
+                <HiOutlineBadgeCheck />
+                <h3 className="principles__principle-title">
+                  Qualidade de Código
+                </h3>
+              </div>
+
+              <p className="principles__principle-description">
+                Prezo pela elevada Qualidade de Código e de Estruturação de
+                Diretórios em meus projetos, favorecendo futuras manutenções.
+              </p>
+            </article>
+
+            <article className="principles__principle">
+              <div className="principles__principle-title-container flex">
+                <HiOutlineBadgeCheck />
+                <h3 className="principles__principle-title">
+                  Empatia com o Usuário
+                </h3>
+              </div>
+
+              <p className="principles__principle-description">
+                Me preocupo com a maneira com que o usuário navegará pela
+                aplicação, tentando sempre prover a melhor experiência.
+              </p>
+            </article>
+
+            <article className="principles__principle">
+              <div className="principles__principle-title-container flex">
+                <HiOutlineBadgeCheck />
+                <h3 className="principles__principle-title">
+                  Aprendizado Contínuo
+                </h3>
+              </div>
+
+              <p className="principles__principle-description">
+                Gosto de estudar novos conteúdos e de botar a mão na massa em
+                projetos, pois acredito que seja a melhor maneira de absorver o
+                que se aprende.
+              </p>
+            </article>
+
+            <article className="principles__principle">
+              <div className="principles__principle-title-container flex">
+                <HiOutlineBadgeCheck />
+                <h3 className="principles__principle-title">Detalhismo</h3>
+              </div>
+
+              <p className="principles__principle-description">
+                Gosto de estar atento aos detalhes que podem fazer diferença no
+                resultado final dos meus projetos, sejam visuais ou de códigos.
+              </p>
+            </article>
+          </div>
+        </Principles>
       </main>
     </Container>
   );
