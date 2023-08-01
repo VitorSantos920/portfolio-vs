@@ -6,16 +6,29 @@ export const TechnologyContainer = styled('article', {
   backgroundClip: 'padding-box',
   border: 'solid 0px transparent',
   borderRadius: '1rem',
-  color: '#fff',
-  cursor: 'pointer',
-  fontWeight: '$bold',
-  height: 55,
-  justifyContent: 'center',
-  margin: '3.75rem 0',
-  padding: '0',
+
   position: 'relative',
-  transition: '1s',
-  width: '12.5rem',
+  padding: '2rem',
+  width: 300,
+  minWidth: 200,
+  flexGrow: 0.5,
+
+  '.technology__title-container': {
+    alignItems: 'center',
+    fontFamily: '$title',
+    gap: '.5rem',
+    marginBottom: '1rem',
+
+    '.technology__title': {
+      color: '$primary',
+      fontSize: '1.7rem',
+    },
+  },
+
+  '.technology__description': {
+    fontFamily: '$text',
+    lineHeight: '150%',
+  },
 
   '&::before': {
     background: 'linear-gradient(to bottom, $primary, $secondary)',
@@ -23,7 +36,7 @@ export const TechnologyContainer = styled('article', {
     bottom: '0',
     content: '',
     left: '0',
-    margin: '-3px',
+    margin: '-5px',
     position: 'absolute',
     right: '0',
     top: '0',
