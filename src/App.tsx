@@ -9,7 +9,16 @@ import {
   BiLogoLinkedinSquare,
   BiSolidUserBadge,
   BiLogoHtml5,
+  BiLogoCss3,
+  BiLogoJavascript,
+  BiLogoTypescript,
+  BiLogoGit,
+  BiLogoReact,
+  BiLogoSass,
 } from 'react-icons/bi';
+import { RxStitchesLogo } from 'react-icons/rx';
+import { GrMysql } from 'react-icons/gr';
+import { SiFigma, SiPhp } from 'react-icons/si';
 
 import { Subtitle } from './style/Subtitle';
 import { Principles } from './style/Principles';
@@ -195,11 +204,71 @@ function App() {
         <Technologies className="technologies">
           <Subtitle className="technologies__title">Tecnologias</Subtitle>
 
-          <div className="technologies__items">
+          <div className="technologies__items flex">
             <Technology
-              icon={<BiLogoHtml5 />}
+              icon={BiLogoHtml5}
               title="HTML5"
-              description="abc"
+              description="Linguagem de Marcação, utilizada para estruturar o layout da página. Foi a primeira linguagem Front-End que tive contato, em 2021."
+            />
+
+            <Technology
+              icon={BiLogoCss3}
+              title="CSS3"
+              description="Linguagem de Estilização, utilizada para estilizar o layout, posicionando elementos, adicionando cores, etc. Foi a segunda linguagem Front-End que tive contato, em 2021."
+            />
+
+            <Technology
+              icon={BiLogoJavascript}
+              title="JavaScript"
+              description="Linguagem de Programação, utilizada para adicionar comportamento e dinamicidade ao layout. Foi a terceira linguagem Front-End que tive contato, em 2021. Junto do HTML e CSS, forma a Tríade Front-End."
+            />
+
+            <Technology
+              icon={BiLogoReact}
+              title="ReactJS"
+              description="Biblioteca Front-End para criação de Interfaces do Usuário (UI, do inglês User Interface). Iniciei os estudos no final de 2022 e estou me aprofundando cada vez mais para atingir a especialização."
+            />
+
+            <Technology
+              icon={BiLogoTypescript}
+              title="TypeScript"
+              description="Linguagem de Programação desenvolvida pela Microsoft. É uma extensão do JavaScript que adiciona Tipagem Estática à linguagem. Iniciei meus estudos em 2022 e utilizo no dia a dia com o ReactJS. "
+            />
+
+            <Technology
+              icon={RxStitchesLogo}
+              title="Stitches"
+              description="Biblioteca de Estilização que utiliza do conceito de Componentes Estilizados para estilizar utilizando CSS-in-JS (CSS no JavaScript). Iniciei os estudos em 2023 para estilizar as aplicações em ReactJS. "
+            />
+
+            <Technology
+              icon={BiLogoSass}
+              title="SASS/SCSS"
+              description="Pré-processador CSS que adiciona funcionalidades adicionais ao CSS, provendo melhor legibilidade e agilidade. Iniciei os estudos em 2022 aplicando em projetos Front-End."
+            />
+
+            <Technology
+              icon={BiLogoGit}
+              title="GIT"
+              description="Ferramenta de Versionamento de Código, utilizado para controlar o histórico de versão de arquivos. Iniciei os estudos em 2020, para realizar este controle e conectá-lo ao GitHub."
+            />
+
+            <Technology
+              icon={GrMysql}
+              title="MySQL"
+              description="Sistema de Gerenciamento de Banco de Dados (SGDB), que permite gerenciar, armazenar, excluir e alterar dados. Iniciei os estudos em 2021 e já utilizei juntamente do PHP para realizar controles de dados."
+            />
+
+            <Technology
+              icon={SiPhp}
+              title="PHP"
+              description="Sendo um acrônimo para “Hypertext Preprocessor”, é uma linguagem de Programação Back-End (Servidor) utilizada no Desenvolvimento Web. Iniciei os estudos em 2021."
+            />
+
+            <Technology
+              icon={SiFigma}
+              title="Figma"
+              description="Software que permite, dentre outras funções, a prototipação de interfaces do usuário e design de produtos. Tive contato em 2021 para aprender a prototipar interfaces, como a deste portfólio."
             />
           </div>
         </Technologies>
