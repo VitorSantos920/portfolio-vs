@@ -8,12 +8,15 @@ import {
   BiLogoGithub,
   BiLogoLinkedinSquare,
   BiSolidUserBadge,
+  BiLogoHtml5,
 } from 'react-icons/bi';
 
 import { Subtitle } from './style/Subtitle';
 import { Principles } from './style/Principles';
 import { Phrase } from './style/Phrase';
 import { Principle } from './components/Principle';
+import { Technologies } from './style/Technologies';
+import { Technology } from './components/Technology';
 
 function App() {
   return (
@@ -188,6 +191,18 @@ function App() {
             />
           </div>
         </Principles>
+
+        <Technologies className="technologies">
+          <Subtitle className="technologies__title">Tecnologias</Subtitle>
+
+          <div className="technologies__items">
+            <Technology
+              icon={<BiLogoHtml5 />}
+              title="HTML5"
+              description="abc"
+            />
+          </div>
+        </Technologies>
       </main>
     </Container>
   );
