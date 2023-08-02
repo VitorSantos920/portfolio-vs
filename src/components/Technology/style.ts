@@ -30,6 +30,23 @@ export const TechnologyContainer = styled('article', {
     lineHeight: '150%',
   },
 
+  '&::after': {
+    content: '',
+
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    height: 10,
+    width: '100%',
+    backgroundColor: 'rgb(5, 170, 243)',
+    transition: '.5s',
+  },
+
+  '&:hover::after': {
+    height: '100%',
+    backgroundColor: 'rgba(5, 170, 243, .1)',
+  },
+
   '&::before': {
     background: 'linear-gradient(to bottom, $primary, $secondary)',
     borderRadius: 'inherit',
