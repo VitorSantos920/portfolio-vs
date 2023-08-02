@@ -1,6 +1,6 @@
 import { styled } from '../../../stitches.config';
 
-export const TechnologyContainer = styled('article', {
+export const TechContainer = styled('article', {
   boxSizing: 'border-box',
   background: '$bg',
   backgroundClip: 'padding-box',
@@ -13,21 +13,11 @@ export const TechnologyContainer = styled('article', {
   minWidth: 200,
   flexGrow: 0.5,
 
-  '.technology__title-container': {
+  div: {
     alignItems: 'center',
     fontFamily: '$title',
     gap: '.5rem',
     marginBottom: '1rem',
-
-    '.technology__title': {
-      color: '$primary',
-      fontSize: '1.7rem',
-    },
-  },
-
-  '.technology__description': {
-    fontFamily: '$text',
-    lineHeight: '150%',
   },
 
   '&::after': {
@@ -59,4 +49,14 @@ export const TechnologyContainer = styled('article', {
     top: '0',
     zIndex: -1,
   },
+});
+
+export const TechTitle = styled('h3', {
+  color: '$primary',
+  fontSize: '1.7rem',
+});
+
+export const TechDescription = styled('p', {
+  fontFamily: '$text',
+  lineHeight: '150%',
 });

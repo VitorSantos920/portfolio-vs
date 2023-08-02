@@ -1,5 +1,9 @@
 import { HiOutlineBadgeCheck } from 'react-icons/hi';
-import { PrincipleContainer } from './style';
+import {
+  PrincipleContainer,
+  PrincipleDescription,
+  PrincipleTitle,
+} from './style';
 
 interface PrincipleProps {
   title: string;
@@ -9,12 +13,13 @@ interface PrincipleProps {
 export function Principle({ title, description }: PrincipleProps) {
   return (
     <PrincipleContainer className="principles__principle">
-      <div className="principles__principle-title-container flex">
+      <div className="flex">
         <HiOutlineBadgeCheck color="#05AAF3" size={60} />
-        <h3 className="principles__principle-title">{title}</h3>
+
+        <PrincipleTitle>{title}</PrincipleTitle>
       </div>
 
-      <p className="principles__principle-description">{description}</p>
+      <PrincipleDescription>{description}</PrincipleDescription>
     </PrincipleContainer>
   );
 }

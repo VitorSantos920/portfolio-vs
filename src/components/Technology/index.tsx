@@ -1,5 +1,5 @@
 import { ElementType } from 'react';
-import { TechnologyContainer } from './style';
+import { TechContainer, TechDescription, TechTitle } from './style';
 
 interface TechnologyProps {
   icon: ElementType;
@@ -8,17 +8,17 @@ interface TechnologyProps {
 }
 
 export function Technology({
-  icon: Icon,
+  icon: TechIcon,
   title,
   description,
 }: TechnologyProps) {
   return (
-    <TechnologyContainer className="technologies__technology">
-      <div className="technology__title-container flex">
-        <Icon size={60} color="#05AAF3" />
-        <h3 className="technology__title">{title}</h3>
+    <TechContainer className="technologies__technology">
+      <div className="flex">
+        <TechIcon size={60} color="#05AAF3" />
+        <TechTitle>{title}</TechTitle>
       </div>
-      <p className="technology__description">{description}</p>
-    </TechnologyContainer>
+      <TechDescription>{description}</TechDescription>
+    </TechContainer>
   );
 }
