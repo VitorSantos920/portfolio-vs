@@ -1,31 +1,34 @@
-import { About } from './style/About';
+// Components
 import { Button } from './components/Button';
-import { Container } from './style/Container';
 import { Header } from './components/Header';
-import { Home } from './style/Home';
+import { Principle } from './components/Principle';
+import { Technology } from './components/Technology';
 
+// Styled Components
+import { About } from './style/About';
+import { Container } from './style/Container';
+import { Home } from './style/Home';
+import { Phrase } from './style/Phrase';
+import { Principles } from './style/Principles';
+import { Subtitle } from './style/Subtitle';
+import { Technologies } from './style/Technologies';
+
+// Icons
 import {
-  BiLogoGithub,
-  BiLogoLinkedinSquare,
-  BiSolidUserBadge,
-  BiLogoHtml5,
   BiLogoCss3,
-  BiLogoJavascript,
-  BiLogoTypescript,
   BiLogoGit,
+  BiLogoHtml5,
+  BiLogoJavascript,
   BiLogoReact,
   BiLogoSass,
+  BiLogoTypescript,
+  BiSolidUserBadge,
+  BiLogoLinkedinSquare,
+  BiLogoGithub,
 } from 'react-icons/bi';
-import { RxStitchesLogo } from 'react-icons/rx';
 import { GrMysql } from 'react-icons/gr';
+import { RxStitchesLogo } from 'react-icons/rx';
 import { SiFigma, SiPhp } from 'react-icons/si';
-
-import { Subtitle } from './style/Subtitle';
-import { Principles } from './style/Principles';
-import { Phrase } from './style/Phrase';
-import { Principle } from './components/Principle';
-import { Technologies } from './style/Technologies';
-import { Technology } from './components/Technology';
 
 function App() {
   return (
