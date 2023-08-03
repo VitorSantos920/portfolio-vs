@@ -47,9 +47,9 @@ function App() {
               </h1>
               <svg
                 id="circle"
-                width="240"
+                width="265"
                 height="160"
-                viewBox="-40 -30 257 105"
+                viewBox="-40 -30 257 115"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >

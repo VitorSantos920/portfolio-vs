@@ -6,20 +6,20 @@ const draw = keyframes({ to: { strokeDashoffset: 0 } });
 export const Home = styled('section', {
   alignItems: 'center',
   gap: 10,
-  justifyContent: 'space-around',
+  justifyContent: 'space-between',
   width: '100%',
-  margin: '$betweenSection 0',
+  margin: '165px 0 $betweenSection 0',
   fontFamily: '$title',
 
   '.home__content': {
-    width: 552,
+    width: '39.43rem',
 
     '.home__container-title': {
       marginBottom: '1.25rem !important',
       position: 'relative',
 
       '.home__title': {
-        fontSize: '3.5rem',
+        fontSize: '4rem',
         fontWeight: '$extraBold',
       },
 
