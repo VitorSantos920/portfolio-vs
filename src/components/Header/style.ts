@@ -1,6 +1,6 @@
 import { styled } from '../../../stitches.config';
 
-export const HeaderContainer = styled('header', {
+export const HeaderContent = styled('div', {
   alignItems: 'center',
   backgroundColor: '#06121D',
   borderRadius: '3rem',
@@ -26,34 +26,46 @@ export const HeaderContainer = styled('header', {
 
     span: { color: '$primary' },
   },
+});
 
-  '.header__nav': {
-    backgroundColor: '#06121D',
-    borderRadius: '3rem 0 3rem 3rem',
-    boxShadow: '2px 0 36px 0 #000000',
-    opacity: 0,
-    visibility: 'hidden',
-    padding: '1.5rem 3rem',
-    position: 'absolute',
-    right: 0,
-    transform: 'scale(1)',
-    transformOrigin: 'top',
-    transition: '.7s ease-out',
-    top: 60,
+export const HeaderMenu = styled('nav', {
+  backgroundColor: '#06121D',
+  boxShadow: '2px 0 36px 0 #000000',
+  gap: '3rem',
+  position: 'fixed',
+  justifyContent: 'center',
+  alignItems: 'center',
+  fontFamily: '$title',
+  fontSize: '2rem',
+  opacity: 0,
+  left: 0,
+  top: 0,
+  transition: '1s',
+  transform: 'translateX(-300px)',
 
-    '.header__menu-items': {
-      alignItems: 'flex-end',
-      flexDirection: 'column',
-      gap: '1rem',
-    },
+  height: '100%',
+  zIndex: 2,
+  width: '0',
+
+  '.header__menu-items': {
+    alignItems: 'center',
+    flexDirection: 'column',
+
+    gap: '3rem',
   },
 
-  '.header__nav.open': {
-    visibility: 'visible',
+  '.header__close-icon': {
+    position: 'absolute',
+    top: 50,
+    right: 150,
+    cursor: 'pointer',
+    transition: '1s',
+  },
+
+  '&.open': {
     opacity: 1,
-    right: 30,
-    top: 74,
-    transform: 'scale(1.3)',
+    transform: 'translateX(0)',
+    width: '100%',
 
     a: {
       padding: '0 .5rem',
@@ -80,5 +92,7 @@ export const HeaderContainer = styled('header', {
         '&::before': { width: '100%' },
       },
     },
+
+    '> svg:hover': { transform: 'rotate(180deg)' },
   },
 });

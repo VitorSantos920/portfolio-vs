@@ -1,23 +1,25 @@
 import { FaLightbulb } from 'react-icons/fa';
-import { HeaderContainer } from './style';
-import { RiMenu3Fill } from 'react-icons/ri';
+import { HeaderContent, HeaderMenu } from './style';
+import { RiMenu3Fill, RiCloseFill } from 'react-icons/ri';
 import { useState } from 'react';
-
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <HeaderContainer className="header flex">
-      <FaLightbulb />
+    <header>
+      <HeaderContent className="header__content flex">
+        <FaLightbulb />
 
-      <a href="#" className="header__logo">
-        Vitu<span>.</span>
-      </a>
+        <a href="#" className="header__logo">
+          Vitu<span>.</span>
+        </a>
 
-      <RiMenu3Fill onClick={handleMenu} />
-      <nav className={`header__nav ${isOpen ? 'open' : 'close'}`}>
+        <RiMenu3Fill onClick={handleMenu} />
+      </HeaderContent>
+
+      <HeaderMenu className={`header__menu ${isOpen ? 'open' : 'close'} flex`}>
         <ul className="header__menu-items flex">
           <li className="header__item">
             <a onClick={handleMenu} href="#">
@@ -49,7 +51,13 @@ export function Header() {
             </a>
           </li>
         </ul>
-      </nav>
-    </HeaderContainer>
+
+        <RiCloseFill
+          size={60}
+          onClick={handleMenu}
+          className="header__close-icon"
+        />
+      </HeaderMenu>
+    </header>
   );
 }
