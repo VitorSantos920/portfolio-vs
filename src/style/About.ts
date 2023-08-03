@@ -41,7 +41,7 @@ export const About = styled('section', {
     fontFamily: '$text',
     textAlign: 'justify',
     fontWeight: '$medium',
-    lineHeight: '170%',
+    lineHeight: '200%',
     fontSize: '1.1rem',
   },
 });

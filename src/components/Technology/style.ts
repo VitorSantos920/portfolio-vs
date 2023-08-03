@@ -58,5 +58,5 @@ export const TechTitle = styled('h3', {
 
 export const TechDescription = styled('p', {
   fontFamily: '$text',
-  lineHeight: '150%',
+  lineHeight: '200%',
 });
