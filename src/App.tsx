@@ -303,7 +303,7 @@ function App() {
           <Button inner="Veja mais projetos" link="#" location="projects" />
 
           <Carousel className="embla" ref={emblaRef}>
-            <div className="embla__container">
+            <div className="embla__container flex">
               <div className="embla__slide">
                 <div className="item-1 flex">
                   <Project
