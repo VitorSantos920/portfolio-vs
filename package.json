@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
+    "embla-carousel-autoplay": "^8.0.0-rc11",
+    "embla-carousel-react": "^8.0.0-rc11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1"

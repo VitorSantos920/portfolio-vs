@@ -31,8 +31,28 @@ import { RxStitchesLogo } from 'react-icons/rx';
 import { SiFigma, SiPhp } from 'react-icons/si';
 import { Projects } from './style/Projects';
 import { Project } from './components/Project';
+import { Carousel } from './style/Carousel';
+import useEmblaCarousel from 'embla-carousel-react';
+import { useEffect, useCallback } from 'react';
+import Autoplay from 'embla-carousel-autoplay';
 
 function App() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ active: true }),
+  ]);
+
+  useEffect(() => {
+    if (emblaApi) console.log(emblaApi.slideNodes());
+  }, [emblaApi]);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
   return (
     <Container>
       <Header />
@@ -282,26 +302,46 @@ function App() {
           <Subtitle className="projects__title">Projetos em Destaque</Subtitle>
           <Button inner="Veja mais projetos" link="#" location="projects" />
 
-          <Project
-            title="Hogwarts"
-            iframeSrc="https://www.youtube.com/embed/oqR2aPoNNhg"
-            name="hogwarts"
-            description="Página ilustrativa sobre Hogwarts, o castelo de Magia e Bruxaria do Universo Mágico de Harry Potter. Apresenta brevemente sua história, as casas, locais e o diretor Alvo Dumbledore."
-          />
-
-          <Project
-            title="Mine Community"
-            iframeSrc="https://www.youtube.com/embed/q_hNKhGcSII"
-            name="minecommunity"
-            description="Projeto visual de tela de Login e Cadastro, aplicando conceitos avançados de validação de formulários utilizando React Hook Form + Zod."
-          />
-
-          <Project
-            title="FoodJP"
-            iframeSrc="https://www.youtube.com/embed/OK6fz9WLk8A"
-            name="foodjp"
-            description="FoodJP é um restaurante de Comida Oriental, o site apresenta seus pratos, algumas avaliações e sua localização."
-          />
+          <Carousel className="embla" ref={emblaRef}>
+            <div className="embla__container">
+              <div className="embla__slide">
+                <div className="item-1 flex">
+                  <Project
+                    title="Hogwarts"
+                    iframeSrc="https://www.youtube.com/embed/oqR2aPoNNhg"
+                    name="hogwarts"
+                    description="Página ilustrativa sobre Hogwarts, o castelo de Magia e Bruxaria do Universo Mágico de Harry Potter. Apresenta brevemente sua história, as casas, locais e o diretor Alvo Dumbledore."
+                  />
+                </div>
+              </div>
+              <div className="embla__slide">
+                <div className="item-1 flex">
+                  <Project
+                    title="Mine Community"
+                    iframeSrc="https://www.youtube.com/embed/q_hNKhGcSII"
+                    name="minecommunity"
+                    description="Projeto visual de tela de Login e Cadastro, aplicando conceitos avançados de validação de formulários utilizando React Hook Form + Zod."
+                  />
+                </div>
+              </div>
+              <div className="embla__slide">
+                <div className="item-1 flex">
+                  <Project
+                    title="FoodJP"
+                    iframeSrc="https://www.youtube.com/embed/OK6fz9WLk8A"
+                    name="foodjp"
+                    description="FoodJP é um restaurante de Comida Oriental, o site apresenta seus pratos, algumas avaliações e sua localização."
+                  />
+                </div>
+              </div>
+            </div>
+            <button className="embla__prev" onClick={scrollPrev}>
+              Prev
+            </button>
+            <button className="embla__next" onClick={scrollNext}>
+              Next
+            </button>
+          </Carousel>
         </Projects>
       </main>
     </Container>
