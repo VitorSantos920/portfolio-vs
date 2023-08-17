@@ -1,5 +1,6 @@
 import { ElementType } from 'react';
-import { TechContainer, TechDescription, TechTitle } from './style';
+import { TechContainer, TechTitle } from './style';
+import { Description } from '../../style/Description';
 
 interface TechnologyProps {
   icon: ElementType;
@@ -18,7 +19,7 @@ export function Technology({
         <TechIcon size={60} color="#05AAF3" />
         <TechTitle>{title}</TechTitle>
       </div>
-      <TechDescription>{description}</TechDescription>
+      <Description>{description}</Description>
     </TechContainer>
   );
 }
