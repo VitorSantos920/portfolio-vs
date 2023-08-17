@@ -74,7 +74,11 @@ export const ButtonContainer = styled('button', {
         '&:hover': { backgroundColor: '$primary' },
       },
 
-      projects: {},
+      projects: {
+        fontSize: '1.2rem',
+        margin: '1.5rem 0',
+        '&:hover': { backgroundColor: '$primary' },
+      },
     },
   },
 });

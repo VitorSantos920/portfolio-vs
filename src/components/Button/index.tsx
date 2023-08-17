@@ -7,20 +7,14 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   link: string;
   location: 'home' | 'about' | 'projects';
 }
-export function Button({
-  inner,
-  blank = false,
-  link,
-  location,
-  ...props
-}: ButtonProps) {
+export function Button({ inner, blank = false, link, location }: ButtonProps) {
   return (
     <a
       href={link}
       target={blank ? '_blank' : ''}
       style={{ width: 'max-content', display: 'block' }}
     >
-      <ButtonContainer location={location} className={`btn ${props.className}`}>
+      <ButtonContainer location={location} className="btn">
         {inner}
       </ButtonContainer>
     </a>
