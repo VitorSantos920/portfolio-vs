@@ -288,17 +288,19 @@ function App() {
             name="hogwarts"
             description="Página ilustrativa sobre Hogwarts, o castelo de Magia e Bruxaria do Universo Mágico de Harry Potter. Apresenta brevemente sua história, as casas, locais e o diretor Alvo Dumbledore."
           />
+
           <Project
-            title="Hogwarts"
-            iframeSrc="https://www.youtube.com/embed/oqR2aPoNNhg"
-            name="hogwarts"
-            description="Página ilustrativa sobre Hogwarts, o castelo de Magia e Bruxaria do Universo Mágico de Harry Potter. Apresenta brevemente sua história, as casas, locais e o diretor Alvo Dumbledore."
+            title="Mine Community"
+            iframeSrc="https://www.youtube.com/embed/q_hNKhGcSII"
+            name="minecommunity"
+            description="Projeto visual de tela de Login e Cadastro, aplicando conceitos avançados de validação de formulários utilizando React Hook Form + Zod."
           />
+
           <Project
-            title="Hogwarts"
-            iframeSrc="https://www.youtube.com/embed/oqR2aPoNNhg"
-            name="hogwarts"
-            description="Página ilustrativa sobre Hogwarts, o castelo de Magia e Bruxaria do Universo Mágico de Harry Potter. Apresenta brevemente sua história, as casas, locais e o diretor Alvo Dumbledore."
+            title="FoodJP"
+            iframeSrc="https://www.youtube.com/embed/OK6fz9WLk8A"
+            name="foodjp"
+            description="FoodJP é um restaurante de Comida Oriental, o site apresenta seus pratos, algumas avaliações e sua localização."
           />
         </Projects>
       </main>
