@@ -7,7 +7,7 @@ export const ProjectContainer = styled('article', {
   borderRadius: '1rem',
   padding: '2rem',
 
-  '.project__preview': { width: '200%' },
+  '.project__preview': { minWidth: '62%' },
 
   '.project__title': {
     color: '$primary',
@@ -20,4 +20,6 @@ export const ProjectContainer = styled('article', {
     justifyContent: 'space-between',
     width: '60%',
   },
+
+  iframe: { maxWidth: '100%' },
 });
