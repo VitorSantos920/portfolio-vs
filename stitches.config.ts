@@ -30,6 +30,8 @@ globalCss({
     boxSizing: 'border-box',
   },
 
+  html: { scrollBehavior: 'smooth' },
+
   body: {
     backgroundColor: '$bg',
     color: '$secondary',

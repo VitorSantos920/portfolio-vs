@@ -22,31 +22,37 @@ export function Header() {
       <HeaderMenu className={`header__menu ${isOpen ? 'open' : 'close'} flex`}>
         <ul className="header__menu-items flex">
           <li className="header__item">
-            <a onClick={handleMenu} href="#">
+            <a onClick={handleMenu} href="#home">
               Início
             </a>
           </li>
 
           <li className="header__item">
-            <a onClick={handleMenu} href="#">
+            <a onClick={handleMenu} href="#about">
               Sobre
             </a>
           </li>
 
           <li className="header__item">
-            <a onClick={handleMenu} href="#">
+            <a onClick={handleMenu} href="#principles">
+              Princípios
+            </a>
+          </li>
+
+          <li className="header__item">
+            <a onClick={handleMenu} href="#techs">
               Tecnologias
             </a>
           </li>
 
           <li className="header__item">
-            <a onClick={handleMenu} href="#">
+            <a onClick={handleMenu} href="#projects">
               Projetos
             </a>
           </li>
 
           <li className="header__item">
-            <a onClick={handleMenu} href="#">
+            <a onClick={handleMenu} href="#contact">
               Contato
             </a>
           </li>

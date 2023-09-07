@@ -62,7 +62,7 @@ function App() {
       <Header />
 
       <main className="main">
-        <Home className="home flex">
+        <Home className="home flex" id="home">
           <div className="home__content">
             <div className="home__container-title">
               <h1 className="home__title">
@@ -148,7 +148,7 @@ function App() {
           </div>
         </Home>
 
-        <About className="about flex">
+        <About className="about flex" id="about">
           <figure>
             <img
               src="/about-img.png"
@@ -187,7 +187,7 @@ function App() {
           </div>
         </About>
 
-        <Principles className="principles flex">
+        <Principles className="principles flex" id="principles">
           <div className="principles__col-1">
             <Subtitle className="principles__title">
               Meus princípios no desenvolvimento
@@ -231,7 +231,7 @@ function App() {
           </div>
         </Principles>
 
-        <Technologies className="technologies">
+        <Technologies className="technologies" id="techs">
           <Subtitle className="technologies__title">Tecnologias</Subtitle>
 
           <div className="technologies__items flex">
@@ -303,7 +303,7 @@ function App() {
           </div>
         </Technologies>
 
-        <Projects className="projects">
+        <Projects className="projects" id="projects">
           <Subtitle className="projects__title">Projetos em Destaque</Subtitle>
           <Button inner="Veja mais projetos" link="#" location="projects" />
 
@@ -349,7 +349,7 @@ function App() {
           </Carousel>
         </Projects>
 
-        <Contact className="contact">
+        <Contact className="contact" id="contact">
           <Subtitle className="contact__title">
             Se interessou?
             <br />
