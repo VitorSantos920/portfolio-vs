@@ -9,9 +9,16 @@ interface ProjectProps {
   iframeSrc: string;
   name: string;
   description: string;
+  deployLink: string;
 }
 
-export function Project({ title, iframeSrc, name, description }: ProjectProps) {
+export function Project({
+  title,
+  iframeSrc,
+  name,
+  description,
+  deployLink,
+}: ProjectProps) {
   return (
     <ProjectContainer className="projects__project flex">
       <div className="project__preview">
@@ -39,8 +46,18 @@ export function Project({ title, iframeSrc, name, description }: ProjectProps) {
           {description}
         </Description>
 
-        <Button inner="Repositório" link="#" location="projects" />
-        <Button inner="Ver projeto (Deploy)" link="#" location="projects" />
+        <Button
+          inner="Repositório"
+          link={`https://github.com/vitorsantos920/${name}`}
+          location="projects"
+          blank
+        />
+        <Button
+          inner="Ver projeto (Deploy)"
+          link={`https://${deployLink}`}
+          location="projects"
+          blank
+        />
       </div>
     </ProjectContainer>
   );

@@ -183,7 +183,7 @@ function App() {
               das pessoas, de forma a auxiliá-las a evoluir.
             </p>
 
-            <Button inner="Entre em contato" link="#" location="about" />
+            <Button inner="Entre em contato" link="#contact" location="about" />
           </div>
         </About>
 
@@ -305,7 +305,12 @@ function App() {
 
         <Projects className="projects" id="projects">
           <Subtitle className="projects__title">Projetos em Destaque</Subtitle>
-          <Button inner="Veja mais projetos" link="#" location="projects" />
+          <Button
+            inner="Veja mais projetos"
+            link="https://github.com/vitorsantos920?tab=repositories"
+            location="projects"
+            blank
+          />
 
           <Carousel className="embla" ref={emblaRef}>
             <div className="embla__container flex">
@@ -316,6 +321,7 @@ function App() {
                     iframeSrc="https://www.youtube.com/embed/oqR2aPoNNhg"
                     name="hogwarts"
                     description="Página ilustrativa sobre Hogwarts, o castelo de Magia e Bruxaria do Universo Mágico de Harry Potter. Apresenta brevemente sua história, as casas, locais e o diretor Alvo Dumbledore."
+                    deployLink="hogwarts-hp.vercel.app/"
                   />
                 </div>
               </div>
@@ -326,6 +332,7 @@ function App() {
                     iframeSrc="https://www.youtube.com/embed/q_hNKhGcSII"
                     name="minecommunity"
                     description="Projeto visual de tela de Login e Cadastro, aplicando conceitos avançados de validação de formulários utilizando React Hook Form + Zod."
+                    deployLink="mine-community.vercel.app/"
                   />
                 </div>
               </div>
@@ -336,6 +343,7 @@ function App() {
                     iframeSrc="https://www.youtube.com/embed/OK6fz9WLk8A"
                     name="foodjp"
                     description="FoodJP é um restaurante de Comida Oriental, o site apresenta seus pratos, algumas avaliações e sua localização."
+                    deployLink="food-jp-restaurant.vercel.app/"
                   />
                 </div>
               </div>
