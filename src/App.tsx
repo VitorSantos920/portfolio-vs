@@ -3,6 +3,7 @@ import { Button } from './components/Button';
 import { Header } from './components/Header';
 import { Principle } from './components/Principle';
 import { Technology } from './components/Technology';
+import { Project } from './components/Project';
 
 // Styled Components
 import { About } from './style/About';
@@ -12,6 +13,9 @@ import { Phrase } from './style/Phrase';
 import { Principles } from './style/Principles';
 import { Subtitle } from './style/Subtitle';
 import { Technologies } from './style/Technologies';
+import { Projects } from './style/Projects';
+import { Carousel } from './style/Carousel';
+import { Contact } from './style/Contact';
 
 // Icons
 import {
@@ -25,15 +29,15 @@ import {
   BiSolidUserBadge,
   BiLogoLinkedinSquare,
   BiLogoGithub,
+  BiLogoWhatsapp,
 } from 'react-icons/bi';
 import { GrMysql } from 'react-icons/gr';
 import { RxStitchesLogo } from 'react-icons/rx';
 import { SiFigma, SiPhp } from 'react-icons/si';
-import { Projects } from './style/Projects';
-import { Project } from './components/Project';
-import { Carousel } from './style/Carousel';
+import { IoMdLocate } from 'react-icons/io';
+
+import { useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { useEffect, useCallback } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
 
 function App() {
@@ -45,17 +49,18 @@ function App() {
     if (emblaApi) console.log(emblaApi.slideNodes());
   }, [emblaApi]);
 
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
+  // const scrollPrev = useCallback(() => {
+  //   if (emblaApi) emblaApi.scrollPrev();
+  // }, [emblaApi]);
 
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
+  // const scrollNext = useCallback(() => {
+  //   if (emblaApi) emblaApi.scrollNext();
+  // }, [emblaApi]);
 
   return (
     <Container>
       <Header />
+
       <main className="main">
         <Home className="home flex">
           <div className="home__content">
@@ -335,14 +340,102 @@ function App() {
                 </div>
               </div>
             </div>
-            <button className="embla__prev" onClick={scrollPrev}>
+            {/* <button className="embla__prev" onClick={scrollPrev}>
               Prev
             </button>
             <button className="embla__next" onClick={scrollNext}>
               Next
-            </button>
+            </button> */}
           </Carousel>
         </Projects>
+
+        <Contact className="contact">
+          <Subtitle className="contact__title">
+            Se interessou?
+            <br />
+            Entre em contato
+          </Subtitle>
+
+          <div className="flex">
+            <div className="contact__info">
+              <Technology
+                icon={IoMdLocate}
+                title="Endereço"
+                description="Campinas, São Paulo, Brasil."
+              />
+              <Technology
+                icon={BiLogoWhatsapp}
+                title="Whatsapp"
+                description="(19) 98975-2211"
+              />
+            </div>
+            <div className="contact__form">
+              <form action="#" method="post">
+                <div className="flex">
+                  <fieldset>
+                    <label htmlFor="fullname">
+                      Nome Completo <span className="text-highlight">*</span>
+                    </label>
+
+                    <input
+                      type="text"
+                      name="fullname"
+                      id="fullname"
+                      placeholder="Vitor Hugo Pires dos Santos"
+                    />
+                  </fieldset>
+
+                  <fieldset>
+                    <label htmlFor="email">
+                      Email <span className="text-highlight">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="vitorsantos@gmail.com"
+                    />
+                  </fieldset>
+                </div>
+
+                <fieldset>
+                  <label htmlFor="email">
+                    Assunto <span className="text-highlight">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Digite o assunto do email..."
+                  />
+                </fieldset>
+
+                <fieldset>
+                  <label htmlFor="message">
+                    Mensagem <span className="text-highlight">*</span>
+                  </label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols={30}
+                    rows={10}
+                    placeholder="Digite a mensagem do email..."
+                  ></textarea>
+                </fieldset>
+                <small>
+                  <span className="text-highlight">*</span> Obrigatório
+                </small>
+
+                <Button
+                  inner="Enviar Email"
+                  link="mailto:pireshugo737@gmail.com"
+                  location="projects"
+                />
+              </form>
+            </div>
+          </div>
+        </Contact>
       </main>
     </Container>
   );
